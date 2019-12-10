@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column">
+    <header>
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand">Carlos Costoso</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="current-train" class="card my-3">
+            <div class="card-header">
+                <span class="card-title">
+                    Current Trains
+                </span>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- To be populated with jQuery and Firebase. -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="add-train card my-3">
+            <div class="card-header">
+                <span class="card-title">Add a Train</span>
+            </div>
+            <form class="card-body">
+                <div class="form-group">
+                    <label for="name-input">Train Name</label>
+                    <input id="name-input" class="form-control" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="dest-input">Destination</label>
+                    <input id="dest-input" class="form-control" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="first-input">First Train Time (HH:mm - military time)</label>
+                    <input id="first-input" class="form-control" type="time">
+                </div>
+                <div class="form-group">
+                    <label for="freq-input">Frequency (min)</label>
+                    <input id="freq-input" class="form-control" type="number">
+                </div>
+                <button id="submit" class="btn btn-primary float-right" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer mt-auto text-center py-3">
+        Carlos Costoso
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+
+    <script src="assets/js/logic.js"></script>
+    
+</body>
+</html>
